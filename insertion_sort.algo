@@ -1,0 +1,40 @@
+FUNCTION length_of_array(n) : INTEGER
+VAR
+    n : INTEGER;
+BEGIN
+    read(n);
+    RETURN n ;
+END
+//*************************************
+PROCEDURE set_array(tab,n)
+VAR
+
+BEGIN
+    FOR i FROM 1 TO n-1 STEP DO
+    read(tab[i]);
+    END_FOR
+END
+//********************************
+
+FUNCTION tri(tab) : INTEGER
+VAR
+
+BEGIN
+FOR i FROM 1 TO n STEP 1  DO
+    key = tab[i];
+    j = i - 1;
+    WHILE (key < tab[j] && j >= 0) DO
+        tab[j + 1] = tab[j];
+        j--;
+    END_WHILE
+    tab[j + 1] := key;
+END_FOR
+//******************************
+ALGORITHM insertion_sort
+VAR
+
+BEGIN
+n=length_of_array(n);
+set_array(tab,n);
+tri(tab);
+END
